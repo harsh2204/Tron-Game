@@ -2,6 +2,7 @@ var t1;
 var t2;
 var c1;
 var c2;
+var blocks=[];
 function setup() {
   createCanvas(600,600);
   // frameRate(20);
@@ -9,6 +10,9 @@ function setup() {
   t2 = new Tron();
   c1 =color (255,100,100);
   c2 =color (100,200,160);
+  // for(var i =0;i<5;i++){
+    blocks.push(new Block());
+    // }
 }
 
 function mousePressed(){

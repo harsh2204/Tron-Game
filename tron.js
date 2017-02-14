@@ -16,8 +16,12 @@ function Tron() {
             }
         }
         this.tail[this.total - 1] = createVector(this.x, this.y);
-        this.xspeed += this.acc/this.scl;
-        this.yspeed += this.acc/this.scl;
+        if(this.xspeed!=0){
+          this.xspeed += this.acc/this.scl;
+        }
+        if(this.yspeed!=0){
+          this.yspeed += this.acc/this.scl;
+        }
         this.x += this.xspeed * this.scl;
         this.y += this.yspeed * this.scl;
         this.x = constrain(this.x, 0, width - this.scl);
@@ -25,7 +29,12 @@ function Tron() {
         this.acc *= 0;
     }
     this.boost = function() {
-        this.acc = 2;
+        if(this.xspeed != 0  ){
+          this.acc = 2*this.xspeed;
+        }
+        if(this.yspeed != 0){
+          this.acc = 2*this.xspeed;
+        }
     }
     this.colorize = function(color) {
 
