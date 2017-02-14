@@ -11,12 +11,12 @@ function setup() {
   c1 =color (255,100,100);
   c2 =color (100,200,160);
   // for(var i =0;i<5;i++){
-<<<<<<< HEAD
-  blocks = new Blocks();
-    blocks.show();
-=======
+
+ // blocks = new Blocks();
+//    blocks.show();
+
     //blocks.push(new Block());
->>>>>>> 7b0025c9e30cd9813c45d61c567f24e80b10dae6
+
     // }
 }
 
