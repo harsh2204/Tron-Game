@@ -11,7 +11,7 @@ function setup() {
   c1 =color (255,100,100);
   c2 =color (100,200,160);
   // for(var i =0;i<5;i++){
-    blocks.push(new Block());
+    //blocks.push(new Block());
     // }
 }
 
