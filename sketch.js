@@ -18,19 +18,28 @@ function mousePressed(){
 }
 
 function draw() {
-  if(t1.total <20){
+  if(t1.total <10){
     t1.total++;
     t2.total++;
   }
-  if(t1.hits(t2)||t2.hits(t1)){
-    noLoop();
-    console.log("Game Over!");
-  }
+  console.log(t1.xspeed);
+  console.log(t1.acc);
+
   background(51);
   t1.update();
   t1.show(c1);
   t2.update();
   t2.show(c2);
+  if(t1.hits(t2)){
+    t1.colorize(100);
+    noLoop();
+    console.log("Game Over! T2 Wins!");
+  }
+  if(t2.hits(t1)){
+    t2.colorize(100);
+    noLoop();
+    console.log("Game Over! T1 Wins!");
+  }
 }
 function keyPressed(){
 // console.log(keyCode);
@@ -42,6 +51,9 @@ function keyPressed(){
     t1.dir(1,0);
   }else if(keyCode == LEFT_ARROW){
     t1.dir(-1,0);
+  }else if(keyCode == 32){
+    console.log("BOOST!");
+    t1.boost();
   }
   if(keyCode == 87){
     t2.dir(0,-1);
