@@ -40,7 +40,7 @@ function Tron() {
     this.hits = function(other){
       for(i = 0; i<other.tail.length;i++){
         var d = dist(this.x, this.y, other.tail[i].x,other.tail[i].y);
-        if(d<this.scl*0.5){
+        if(d<this.scl){
           console.log("Hit!");
           return true;
         }
