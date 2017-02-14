@@ -2,7 +2,7 @@ var t1;
 var t2;
 var c1;
 var c2;
-var blocks=[];
+var blocks;
 function setup() {
   createCanvas(600,600);
   // frameRate(20);
@@ -11,7 +11,8 @@ function setup() {
   c1 =color (255,100,100);
   c2 =color (100,200,160);
   // for(var i =0;i<5;i++){
-    blocks.push(new Block());
+  blocks = new Blocks();
+    blocks.show();
     // }
 }
 
