@@ -22,5 +22,18 @@ function Wall() {
 
 
     }
-
+    this.hit = function (other){
+      if(other.x >= 590 ){
+          return true;
+      }
+      if(other.y >= 590){
+          return true;
+      }
+      if(other.y <= 10){
+          return true;
+      }
+      if(other.x <= 10){
+          return true;
+      }
+}
 }

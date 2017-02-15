@@ -71,6 +71,16 @@ function draw() {
       noLoop();
     }
   }
+  if(wall.hit(t1)){
+    t1.colorize(100);
+    console.log("P1 Hit! GG");
+    noLoop();
+  }
+  if(wall.hit(t2)){
+    t2.colorize(100);
+    console.log("P2 Hit! GG");
+    noLoop();
+  }
     wall.show();
 }
 function keyReleased(){
