@@ -8,8 +8,9 @@ function Block() {
         fill(255);
         rect(this.x, this.y, this.size, this.size);
         noFill();
+        stroke('red');
         ellipse(this.x,this.y,this.size*2,this.size*2);
-
+        noStroke();
     }
     this.hits = function(other) {
             var d = dist(this.x, this.y, other.x, other.y);

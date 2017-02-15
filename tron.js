@@ -1,6 +1,6 @@
 function Tron() {
-    this.x = random(0, 600);
-    this.y = random(0, 600);
+    this.x = random(100, 500);
+    this.y = random(100, 500);
     this.scl = 5;
     this.xspeed = 1;
     this.yspeed = 0;
@@ -33,7 +33,7 @@ function Tron() {
         this.x = constrain(this.x, 0, width - this.scl);
         this.y = constrain(this.y, 0, height - this.scl);
         this.acc *= 0;
-        console.log(this.xspeed);
+        // console.log(this.xspeed);
 
     }
     this.normalize = function(){
