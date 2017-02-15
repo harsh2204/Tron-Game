@@ -8,8 +8,7 @@ function Tron() {
 
     this.total = 0;
     this.tail = [];
-    this.col = [];
-
+    this.col = [];    
 
     this.update = function() {
         if (this.total == this.tail.length) {
