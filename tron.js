@@ -9,6 +9,8 @@ function Tron() {
     this.total = 0;
     this.tail = [];
     this.col = [];
+
+
     this.update = function() {
         if (this.total == this.tail.length) {
             for (var i = 0; i < this.tail.length - 1; i++) {
@@ -48,9 +50,11 @@ function Tron() {
         this.yspeed = -1;
       }
     }
+
     this.boost = function() {
         this.acc = 2;
     }
+
     this.colorize = function(color) {
 
         for (var i = this.tail.length - 1; i >= 0; i--) {
@@ -59,6 +63,7 @@ function Tron() {
         }
         ellipse(this.x + (this.scl / 2), this.y + (this.scl / 2), this.scl, this.scl)
     }
+
     this.show = function(c) {
         noStroke();
         this.col = c.levels;
