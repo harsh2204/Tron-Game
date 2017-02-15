@@ -4,7 +4,9 @@ var c1;
 var c2;
 var blocks=[];
 var wall;
+var socket;
 function setup() {
+  socket = io.connect('http://localhost:3000');
   createCanvas(600,600);
   // frameRate(20);
   t1 = new Tron();
