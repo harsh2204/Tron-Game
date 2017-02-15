@@ -14,7 +14,7 @@ function setup() {
   wall = new Wall();
 
 
-  for(var i =0;i<5;i++){
+  for(var i =0;i<15;i++){
     blocks.push(new Block());
     }
 }
@@ -25,7 +25,7 @@ function mousePressed(){
   t1 = new Tron();
   t2 = new Tron();
   blocks =[];
-  for(var i =0;i<5;i++){
+  for(var i =0;i<15;i++){
     blocks.push(new Block());
     }
   loop();

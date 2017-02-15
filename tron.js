@@ -2,7 +2,7 @@ function Tron() {
     this.x = random(100, 500);
     this.y = random(100, 500);
     this.scl = 5;
-    this.xspeed = 1;
+    this.xspeed = 0;
     this.yspeed = 0;
     this.acc = 0;
 
