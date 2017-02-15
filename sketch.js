@@ -2,7 +2,7 @@ var t1;
 var t2;
 var c1;
 var c2;
-var blocks;
+var blocks=[];
 function setup() {
   createCanvas(600,600);
   // frameRate(20);
@@ -10,20 +10,21 @@ function setup() {
   t2 = new Tron();
   c1 =color (255,100,100);
   c2 =color (100,200,160);
-  // for(var i =0;i<5;i++){
-
- // blocks = new Blocks();
-//    blocks.show();
-
-    //blocks.push(new Block());
-
-    // }
+  for(var i =0;i<5;i++){
+    blocks.push(new Block());
+    }
 }
 
 function mousePressed(){
   // t1.total++;
   // t2.total++;
-
+  t1 = new Tron();
+  t2 = new Tron();
+  blocks =[];
+  for(var i =0;i<5;i++){
+    blocks.push(new Block());
+    }
+  loop();
 }
 
 function draw() {
@@ -31,10 +32,12 @@ function draw() {
     t1.total++;
     t2.total++;
   }
-  console.log(t1.xspeed);
-  console.log(t1.acc);
+
+  // console.log(t1.xspeed);
+  // console.log(t1.acc);
 
   background(51);
+
   t1.update();
   t1.show(c1);
   t2.update();
@@ -48,6 +51,24 @@ function draw() {
     t2.colorize(100);
     noLoop();
     console.log("Game Over! T1 Wins!");
+  }
+  for(var i =0; i<blocks.length;i++){
+    blocks[i].show();
+    if(blocks[i].hits(t1)){
+      t1.colorize(100);
+      console.log("P1 Hit! GG");
+      noLoop();
+    }
+    if(blocks[i].hits(t2)){
+      t2.colorize(100);
+      console.log("P2 Hit! GG");
+      noLoop();
+    }
+  }
+}
+function keyReleased(){
+  if(keyCode == 32){
+    t1.normalize();
   }
 }
 function keyPressed(){

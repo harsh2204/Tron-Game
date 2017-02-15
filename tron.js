@@ -16,25 +16,40 @@ function Tron() {
             }
         }
         this.tail[this.total - 1] = createVector(this.x, this.y);
-        if(this.xspeed!=0){
-          this.xspeed += this.acc/this.scl;
+        if (this.xspeed > 0) {
+            this.xspeed += this.acc / this.scl;
+        } else if (this.xspeed < 0) {
+            this.xspeed -= this.acc / this.scl;
         }
-        if(this.yspeed!=0){
-          this.yspeed += this.acc/this.scl;
+        if (this.yspeed > 0) {
+            this.yspeed += this.acc / this.scl;
+        } else if (this.yspeed < 0) {
+            this.yspeed -= this.acc / this.scl;
         }
         this.x += this.xspeed * this.scl;
         this.y += this.yspeed * this.scl;
         this.x = constrain(this.x, 0, width - this.scl);
         this.y = constrain(this.y, 0, height - this.scl);
         this.acc *= 0;
+        console.log(this.xspeed);
+
+    }
+    this.normalize = function(){
+      if(this.xspeed > 0){
+        this.xspeed = 1;
+      }
+      if(this.xspeed < 0){
+        this.xspeed = -1;
+      }
+      if(this.yspeed > 0){
+        this.yspeed = 1;
+      }
+      if(this.yspeed < 0){
+        this.yspeed = -1;
+      }
     }
     this.boost = function() {
-        if(this.xspeed != 0  ){
-          this.acc = 2*this.xspeed;
-        }
-        if(this.yspeed != 0){
-          this.acc = 2*this.xspeed;
-        }
+        this.acc = 2;
     }
     this.colorize = function(color) {
 
