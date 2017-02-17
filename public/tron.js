@@ -1,15 +1,15 @@
-function Tron() {
-    this.x = random(100, 500);
-    this.y = random(100, 500);
+function Tron(id) {
+    this.x = random(20, 480);
+    this.y = random(20, 480);
     this.scl = 5;
     this.xspeed = 0;
     this.yspeed = 0;
     this.acc = 0;
-
     this.total = 0;
     this.tail = [];
-    this.col = [];    
-
+    this.col = [];
+    this.id = id;
+    this.colour;
     this.update = function() {
         if (this.total == this.tail.length) {
             for (var i = 0; i < this.tail.length - 1; i++) {
