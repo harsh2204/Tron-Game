@@ -16,7 +16,7 @@ function setup() {
 //  c1 =color (255,100,100);
   c1 =color (255,255,153);
   c2 =color (100,200,160);
-  c3 =color (0,0,200);
+  c3 =color (221,0,72);
   wall = new Wall();
 	p1 =0;
 	p2 =0;
@@ -31,7 +31,7 @@ t1 = new Tron();
   t2 = new Tron();
   t3 = new Tron();
   blocks =[];
-  for(var i =0;i<30;i++){
+  for(var i =0;i<50;i++){
     blocks.push(new Block());
     }
   loop();
